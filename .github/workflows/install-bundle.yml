@@ -2,7 +2,7 @@ name: Install release bundle
 
 on:
   repository_dispatch:
-    types: bundle-received
+
 jobs:
   build:
     name: Install the bundle components

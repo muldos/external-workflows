@@ -1,0 +1,16 @@
+name: Install release bundle
+
+on:
+  repository_dispatch:
+    types: bundle-received
+jobs:
+  build:
+    name: Install the bundle components
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup JFrog CLI
+        uses: jfrog/setup-jfrog-cli@v3
+        env:
+          JF_ENV_1: ${{ secrets.JF_SECRET_ENV_1 }}
+      - name: Do Something
+        run: echo Doing Something...

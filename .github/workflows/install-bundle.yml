@@ -13,4 +13,4 @@ jobs:
         env:
           JF_ENV_1: ${{ secrets.JF_SECRET_ENV_1 }}
       - name: Do Something
-        run: echo Doing Something...
+        run: jf rt ping
